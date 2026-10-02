@@ -1,0 +1,28 @@
+{
+  "name": "devflow",
+  "version": "0.1.0",
+  "private": true,
+  "description": "A terminal dashboard for GitHub pull requests that need your attention.",
+  "type": "module",
+  "bin": {
+    "devflow": "dist/cli.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsx src/cli.ts",
+    "start": "node dist/cli.js",
+    "test": "npm run build && node --test dist/**/*.test.js",
+    "check": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.5",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.2"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "marked": "^15.0.12"
+  }
+}
